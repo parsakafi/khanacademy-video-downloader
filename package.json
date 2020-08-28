@@ -1,0 +1,16 @@
+{
+  "name": "khanacademy-video-downloader",
+  "version": "1.0.0",
+  "description": "KhanAcademy Video Downloader",
+  "main": "khanacademy-downloader.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parsakafi/bootstrap-rtl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parsakafi/bootstrap-rtl/issues"
+  },
+  "homepage": "https://github.com/parsakafi/bootstrap-rtl#readme"
+}
