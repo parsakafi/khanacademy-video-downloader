@@ -80,11 +80,11 @@ function findCourseInfo(str) {
     let res = regex.exec(str);
     if (res !== null) {
         if (typeof res[0] !== "undefined") {
-            let config = res[0].replace('app-entry.js"] = ', '') + '}}';
-            config = JSON.parse(config);
-            config = config.dataCache['content-en'];
-            config = config[Object.keys(config)[0]];
-            tutorials = config.data.tabs[0].modules[0].tutorials;
+            let data = res[0].replace('app-entry.js"] = ', '') + '}}';
+            data = JSON.parse(data);
+            data = data.dataCache['content-en'];
+            data = data[Object.keys(data)[0]];
+            tutorials = data.data.tabs[0].modules[0].tutorials;
 
             for (tutorial of tutorials) {
                 let items = [];
