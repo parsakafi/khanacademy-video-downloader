@@ -3,7 +3,7 @@ Download course videos from [KhanAcademy](https://www.khanacademy.org)
 
 
 ### Download
-Download or clone this repository
+[Download](https://github.com/parsakafi/khanacademy-video-downloader/archive/master.zip) or clone this repository
 ```text
 _> git clone https://github.com/parsakafi/khanacademy-video-downloader.git
 _> cd khanacademy-video-downloader

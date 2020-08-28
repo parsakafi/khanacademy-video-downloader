@@ -5,12 +5,12 @@
   "main": "khanacademy-downloader.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/parsakafi/bootstrap-rtl.git"
+    "url": "git+https://github.com/parsakafi/khanacademy-video-downloader.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/parsakafi/bootstrap-rtl/issues"
+    "url": "https://github.com/parsakafi/khanacademy-video-downloader/issues"
   },
-  "homepage": "https://github.com/parsakafi/bootstrap-rtl#readme"
+  "homepage": "https://github.com/parsakafi/khanacademy-video-downloader#readme"
 }
