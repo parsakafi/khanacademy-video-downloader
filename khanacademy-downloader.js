@@ -74,6 +74,7 @@ async function getPage(pageURL) {
         });
     })
 }
+
 function findCourseInfo(str) {
     let info = [];
     const regex = /(?:app-entry.js"] = )(?:\{)(.*(\n.*?)*)(?:\"\})/gm;
@@ -101,6 +102,10 @@ function findCourseInfo(str) {
                         });
                     }
                 }
+
+                if (items.length === 0)
+                    continue;
+
                 info.push({
                     catSlug: tutorial.slug,
                     catTitle: tutorial.title,
