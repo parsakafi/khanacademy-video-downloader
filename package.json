@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "KhanAcademy Video Downloader",
   "main": "khanacademy-downloader.js",
+  "keywords": [
+    "khanacademy",
+    "download",
+    "downloader",
+    "video"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/parsakafi/khanacademy-video-downloader.git"
