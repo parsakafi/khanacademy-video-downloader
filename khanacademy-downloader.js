@@ -5,7 +5,7 @@ const F = require('./functions');
 const config = require('./config');
 
 if (process.argv.length < 3) {
-    console.log(`Usage: node download.js {Course Link}`);
+    console.log(`Usage: node khanacademy-downloader.js {Course Link}`);
     return;
 }
 
