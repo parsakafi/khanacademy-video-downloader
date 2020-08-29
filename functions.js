@@ -3,6 +3,24 @@ const URL = require('url').URL;
 const path = require('path');
 const https = require('https');
 
+String.prototype.trimLeft = function (charlist) {
+    if (charlist === undefined)
+        charlist = "\s";
+
+    return this.replace(new RegExp("^[" + charlist + "]+"), "");
+};
+
+String.prototype.trimRight = function (charlist) {
+    if (charlist === undefined)
+        charlist = "\s";
+
+    return this.replace(new RegExp("[" + charlist + "]+$"), "");
+};
+
+String.prototype.trim = function (charlist) {
+    return this.trimLeft(charlist).trimRight(charlist);
+};
+
 const downloadFile = async (url, name) => {
     const file = fs.createWriteStream(name);
     return new Promise((resolve, reject) => {
@@ -37,8 +55,10 @@ const findTitle = str => {
 */
 const getDownloadDir = async (subDir = null, firstDelete = false) => {
     let dir = __dirname + path.sep + 'Downloads';
-    if (subDir)
+    if (subDir) {
+        subDir = subDir.trim('.');
         dir += path.sep + subDir;
+    }
 
     if (firstDelete && fs.existsSync(dir))
         fs.rmdirSync(dir, { recursive: true });
