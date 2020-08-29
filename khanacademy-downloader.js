@@ -64,7 +64,7 @@ async function getPage(pageURL) {
             });
             res.on("end", () => {
                 resolve({
-                    info: findCourseInfo(body),
+                    info: getCourseInfo(body),
                     title: F.findTitle(body)
                 });
             });
@@ -75,7 +75,7 @@ async function getPage(pageURL) {
     })
 }
 
-function findCourseInfo(str) {
+function getCourseInfo(str) {
     let info = [];
     const regex = /(?:app-entry.js"] = )(?:\{)(.*(\n.*?)*)(?:\"\})/gm;
     let res = regex.exec(str);
@@ -96,7 +96,6 @@ function findCourseInfo(str) {
                             slug: item.slug,
                             url: item.nodeUrl,
                             description: item.description,
-                            youtubeId: item.youtubeId,
                             youtubeId: item.youtubeId,
                             downloadURL: item.downloadUrls.mp4
                         });
